@@ -1,10 +1,10 @@
 # ct_dose_visualization
 
-## 📋 Project Overview
+## Project Overview
 
 A medical imaging processing tool for preprocessing, registering, and visualizing CT scans with radiotherapy dose distributions. Supports RTSTRUCT contour mapping and display, used for head and neck cancer radiotherapy plan assessment.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 ct_dose_view/
@@ -21,7 +21,7 @@ ct_dose_view/
 └── ct_dose_roi_four_panel.png       # Output image example
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Environment Setup
 
@@ -48,7 +48,7 @@ python main.py
 
 3. **View Results**: Output image is saved to `ct_dose_roi_four_panel.png`
 
-## 📊 Workflow
+## Workflow
 
 ```
 Input Files
@@ -70,7 +70,7 @@ Visualization Overlay (CT + Dose + ROI)
 Output High-Resolution Image
 ```
 
-## 🔧 Core Module Documentation
+## Core Module Documentation
 
 ### main.py
 Main program executing the complete data processing pipeline:
@@ -94,7 +94,7 @@ Original algorithm version (reference use), primarily containing:
 2. Early visualization schemes
 3. Can serve as template for feature extensions
 
-## 💊 Clinical Application Case
+## Clinical Application Case
 
 This project is applied to **nasopharyngeal carcinoma (NPC) radiotherapy plan verification**, including the following ROIs:
 
@@ -102,7 +102,7 @@ This project is applied to **nasopharyngeal carcinoma (NPC) radiotherapy plan ve
 - **Clinical Target Volume**: CTV60, PTV6000
 - **Organ Constraints**: Brain Stem, Spinal Cord, Optic Chiasm, Optic Nerves, Parotids
 
-## 📈 Output Examples
+## Output Examples
 
 Generates four-panel medical imaging figure:
 - **Coronal View** - Top left
@@ -116,7 +116,7 @@ Each panel includes:
 - Colored ROI contours (customizable)
 - Coordinate scales and measurement information
 
-## 🔌 Data Format Specifications
+## Data Format Specifications
 
 ### NIfTI File Format
 1. Supports both compressed (.nii.gz) and uncompressed (.nii) formats
@@ -131,7 +131,7 @@ Each panel includes:
 - **NIfTI Coordinate System**: Usually RAS (determined by affine matrix)
 - Program automatically handles coordinate transformation
 
-## ⚙️ Configuration Parameters
+## Configuration Parameters
 
 Customizable in `main.py`:
 ```python
@@ -148,7 +148,7 @@ colors                        # ROI contour colors
 linewidths                    # ROI contour line widths
 ```
 
-## 🐛 Known Issues & Future Improvements
+## Known Issues & Future Improvements
 
 - [ ] Support for direct DICOM format CT/Dose input (currently NIfTI only)
 - [ ] Interactive slice selection UI
@@ -156,10 +156,10 @@ linewidths                    # ROI contour line widths
 - [ ] Batch processing for multiple patient datasets
 - [ ] 3D visualization preview capability
 
-## 📝 License
+## License
 
 This project is intended for academic and research purposes.
 
-## 💡 Development Tip
+## Development Tip
 
 Modify the `roi_map` and `colors` dictionaries in `utils.py` to adapt to different clinical scenarios (e.g., lung cancer, breast cancer, etc.).
